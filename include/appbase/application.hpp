@@ -289,7 +289,7 @@ namespace appbase {
          virtual const std::string& name()const override { return _name; }
 
          virtual void register_dependencies() {
-            static_cast<Impl*>(this)->plugin_requires([&](auto& plug){});
+            static_cast<Impl*>(this)->plugin_requires([&](auto&){});
          }
 
          virtual void initialize(const variables_map& options) override {

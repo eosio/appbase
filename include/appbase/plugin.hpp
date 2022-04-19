@@ -10,7 +10,7 @@
 
 #define APPBASE_PLUGIN_REQUIRES( PLUGINS )                               \
    template<typename Lambda>                                           \
-   void plugin_requires( Lambda&& l ) {                                \
+   void plugin_requires( [[maybe_unused]] Lambda&& l ) {                                \
       BOOST_PP_SEQ_FOR_EACH( APPBASE_PLUGIN_REQUIRES_VISIT, l, PLUGINS ) \
    }
 
